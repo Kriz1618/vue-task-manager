@@ -49,7 +49,7 @@ export default {
   methods: {
     async loginUser() {
       if (this.pass && this.email) {
-        const api_key = 'AIzaSyBAR2Os5viqoKhtV61K2MpmzzqTszeG7_U';
+        const api_key = process.env.VUE_APP_API_KEY;
 
         const res = await fetch(
           `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${api_key}`,

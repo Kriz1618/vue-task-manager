@@ -54,7 +54,7 @@ export default {
 
       const data = await res.json();
 
-      if (data.error) {
+      if (data && data.error) {
         localStorage.removeItem('user');
         this.$router.push('/login');
       }

@@ -64,7 +64,7 @@ export default {
   methods: {
     async signUp() {
       if (this.pass1 && this.pass1 === this.pass2) {
-        const api_key = 'AIzaSyBAR2Os5viqoKhtV61K2MpmzzqTszeG7_U';
+        const api_key = process.env.VUE_APP_API_KEY;
 
         const res = await fetch(
           `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${api_key}`,
